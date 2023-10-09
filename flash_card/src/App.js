@@ -47,7 +47,9 @@ const questions = [
 function FlashCards() {
   const [selectedId, setSelectedId] = useState(null);
   function handle(id) {
-    setSelectedId(id !== selectedId ? id : null);
+    setSelectedId(id !== selectedId ? id : null); // question.id!=selectedId= active color=question.id and question.id==selectedId=previous=null
+    console.log(selectedId + "selected id");
+    console.log(id + "question id");
   }
   return (
     <div className="flashcards" key={questions.id}>
